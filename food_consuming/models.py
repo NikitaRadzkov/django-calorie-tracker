@@ -14,5 +14,5 @@ class Food(models.Model):
 
 
 class Consume(models.Model):
-    user = models.ForeignKey(User)
-    food = models.ForeignKey(Food)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    food_consumed = models.ForeignKey(Food, on_delete=models.DO_NOTHING)
